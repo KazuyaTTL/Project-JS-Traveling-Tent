@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beach Camping</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    main {
+      z-index: 2;
+      position: relative;
+      background: #fff;
+      margin: 150px 50px 16px;
+      padding: 16px;
+      margin-top: -50px;
+      border-radius: 3px;
+    }
+
+    main p {
+      font-family: Poppins;
+      font-size: 15px;
+      color: #505050;
+    }
+
+    main img {
+      max-width: 100%;
+      object-fit: cover;
+      height: auto;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .col-6 {
+      width: 50%;
+      min-width: 0;
+      padding: 4px 8px;
+    }
+
+    @media (max-width: 772px) {
+      .col-6 {
+        width: 100%;
+      }
+    }
+
+    .my-4 {
+      margin: 16px 0;
+    }
+
+    .info {
+      text-align: left;
+      padding: 20px;
+      background-color: #4fd1c5;
+      /* Màu nền cho khối info */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: calc(100% - 40px);
+      /* Giảm chiều rộng để phù hợp với padding */
+      margin: 20px auto;
+    }
+
+    .info p {
+      font-size: 1em;
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .info ul {
+      list-style-type: disc;
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    .info strong {
+      color: #3c663a;
+    }
+
+    .banner {
+      height: 100%;
+      /* Chiều cao của banner bằng chiều cao của header */
+      background-image: url('https://wallup.net/wp-content/uploads/2016/05/24/372451-landscape-tropical-beach.jpg');
+      /* Đường dẫn tới hình ảnh của bạn */
+      background-size: cover;
+      /* Đảm bảo hình ảnh bao phủ toàn bộ vùng banner */
+      background-position: center;
+      /* Căn giữa hình ảnh */
+      color: #fff;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 0;
+      /* Đảm bảo không có khoảng cách trên cùng */
+    }
+
+    .banner h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .banner img {
+      max-width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+
+    .banner .content {
+      max-width: 600px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .banner .content .subtitle {
+      font-family: Satisfy, cursive;
+      font-size: 33px;
+      line-height: 1.145833333333333em;
+      display: block;
+    }
+
+    .banner .content .title {
+      line-height: 1.092307692307692em;
+      font-weight: 600;
+      letter-spacing: -0.05em;
+      font-size: 58px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .info-grid div {
+      display: flex;
+      align-items: center;
+    }
+
+    .info-grid div span {
+      margin-left: 10px;
+    }
+
+    footer {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1em;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 10px 0 0;
+    }
+
+    footer ul li {
+      display: inline;
+    }
+
+    footer ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    footer ul li a:hover {
+      color: #4fd1c5;
+    }
+
+    /* Form styling */
+    .contact-form {
+      background-color: #4fd1c5;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: calc(100% - 40px);
+      margin: 20px auto;
+      color: white;
+    }
+
+    .contact-form h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .contact-form p {
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background-color: white;
+      color: #4fd1c5;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    /* Ensure images in columns have the same height */
+    .col-6 img {
+      height: 300px; /* Set a fixed height */
+      object-fit: cover; /* Ensure the image covers the area */
+    }
+    .navbar {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            position: relative;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .all-links {
+            position: absolute;
+            right: 0;
+            display: flex;
+            gap: 10px;
+        }
+  </style>
+</head>
+
+<body>
+  <!--head-->
+  <header>
+    <nav class="navbar">
+      <h2 class="logo"><a href="#">Beach Camping</a></h2>
+      <input type="checkbox" id="menu-toggler" />
+      <label for="menu-toggler" id="hamburger-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z" />
+        </svg>
+      </label>
+      <ul class="all-links">
+       
+      </ul>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <img src="https://cdn.concreteplayground.com/content/uploads/2019/10/MimosaRocksNationalPark-camping-DNSW.jpg?webp=false" />
+    <div class="content">
+      <div>
+        <span class="subtitle">Destinations</span>
+        <h1 class="title">Tallow Beach</h1>
+      </div>
+    </div>
+  </div>
+  <main>
+    <h1 class="font-size: 30px; color: #212121">Tallow Beach</h1>
+    <p style="margin-top: 18px">
+        Tallow Beach, located in New South Wales, Australia, is a hidden gem for beach camping enthusiasts. Nestled near the vibrant town of Byron Bay, this beautiful beach offers a serene and picturesque setting for campers. The long stretch of golden sand, backed by lush vegetation and scenic cliffs, provides an ideal spot for relaxing and enjoying nature. Tallow Beach is also a haven for surfers, with consistent waves and a laid-back atmosphere. Visitors can enjoy a variety of activities, including swimming, fishing, and hiking. As the sun sets, campers can unwind by the campfire, listening to the soothing sounds of the ocean and gazing at the star-filled sky, making it a perfect getaway for nature lovers.
+    </p>
+
+    <div class="row my-4">
+      <div class="col-6">
+        <img width="800" height="530"
+          src="https://outforia.com/wp-content/uploads/2020/12/Tips_Camping_Beach_16_1220.jpg" />
+        <div style="height: 30px"></div>
+      </div>
+      <div class="col-6">
+        <img width="800" height="530"
+          src="https://www.beyondthetent.com/wp-content/uploads/2023/08/Camping-at-Grayton-Beach-State-Park-768x431.jpg" />
+      </div>
+    </div>
+
+    <p>
+        Visiting Tallow Beach offers a perfect blend of relaxation and adventure, making it an ideal destination for beach camping. The beach's pristine beauty, with its golden sands and turquoise waters, creates a tranquil environment to escape the hustle and bustle of everyday life. Its proximity to Byron Bay means you can easily explore local attractions, enjoy vibrant markets, and indulge in delicious cuisine. Additionally, Tallow Beach is less crowded compared to other nearby beaches, providing a more peaceful and private experience. Whether you're a surfer seeking great waves, a nature lover enjoying coastal hikes, or simply looking to relax by the sea, Tallow Beach offers something for everyone.
+    </p>
+
+    <div class="info">
+      <h1>Good to Know</h1>
+      <p>Read the basic info and also some fun facts! Here you will find everything you should know
+        about</p>
+      <div class="info-grid">
+        <div><span>📍 Country</span><span>United States</span></div>
+        <div><span>📄 Visa Requirements</span><span>Visa requirements vary by nationality; check with local embassies or travel advisories.</span></div>
+        <div><span>💬 Languages spoken</span><span>English</span></div>
+        <div><span>💶 Currency Used</span><span>US Dollar (USD)</span></div>
+        <div><span>📏 Area (km2)</span><span>8,983 square kilometers</span></div>
+      </div>
+
+    </div>
+
+    <h1 class="font-size: 30px; color: #212121">Municipalities</h1>
+    <p style="margin-top: 18px">
+        Municipalities surrounding Tallow Beach, particularly near Byron Bay in New South Wales, Australia, offer a charming blend of coastal beauty and vibrant community life. This region is known for its relaxed atmosphere, pristine beaches, and lush hinterland. Visitors to these municipalities can explore picturesque coastal trails, indulge in locally sourced cuisine at beachside cafes, and experience a rich arts and cultural scene. Whether you're strolling through quaint seaside villages, surfing along world-class waves, or simply soaking in the sun on Tallow Beach, the municipalities surrounding this area promise a memorable and rejuvenating coastal getaway.
+    </p>
+
+    <div class="row my-4">
+      <div class="col-6">
+        <img width="1300" height="650"
+          src="https://lajollamom.com/wp-content/uploads/2018/01/best-san-diego-beach-hotels-pacific-terrace-pool.jpg" />
+      </div>
+      <div class="col-6">
+        <img width="1300" height="650"
+          src="https://secureservercdn.net/198.71.233.51/5kb.d43.myftpupload.com/wp-content/uploads/2018/05/Grand-Pacific-Resort-Oceanside-Beachside.jpg?time=1592103914" />
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Leave a Reply</h2>
+      <p>Do you have some comments or questions for us? We'd love to hear from you! Don't be shy! Feel free to drop us a message!</p>
+      <form id="contactForm" action="https://formspree.io/f/movaqypd" method="POST">
+        <textarea name="message" placeholder="Message*" required></textarea>
+        <input type="email" name="_replyto" placeholder="Email*" required>
+        <input type="text" name="name" placeholder="Name*" required>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </main>
+
+  <footer style="margin-top: 50px;">
+    <div>
+      <span>Copyright © 2023 All Rights Reserved</span>
+      </span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

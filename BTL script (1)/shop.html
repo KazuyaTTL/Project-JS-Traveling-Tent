@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+   
+    <header>
+        <nav class="navbar">
+          <h2 class="logo"><a href="#">Shop</a></h2>
+          <input type="checkbox" id="menu-toggler">
+          <label for="menu-toggler" id="hamburger-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+          </label>
+          <ul class="all-links">
+            <li><a href="#moutain">Mountain Hiking</a></li>
+            <li><a href="#leak">Leakside Caping</a></li>
+            <li><a href="#beach" >Beach Camping</a></li>
+            <li><a href="#forest">Forest Exploration</a></li>
+            <li><a href="#rv">RV Camping</a></li>
+            <li><a href="#desert">Desert Camping</a></li> 
+            <a href="#" class="fas fa-shopping-cart">
+                <span id="cart-count">0</span>
+            </a>
+          </ul>
+        </nav>
+
+      </header>
+      
+
+      
+      <!--homepage-->>
+      <section class="homepage" id="home">
+        <div class="content">
+          <div class="text">
+            <h1>Adventure Gear Hub</h1>
+            <p>
+                Welcome to the Adventure Gear Hub! We provide you with the best camping gear for your next adventure. <br>
+                From mountain hiking to desert camping, we have everything you need to make your trip unforgettable.
+            </p>         
+      </section>
+
+      <!-- Giỏ hàng -->
+    <div id="cart" class="cart">
+        <h2>Shopping cart</h2>
+        <ul id="cart-items"></ul>
+        <div class="total">
+            Total: $<span id="total-price">0.00</span>
+        </div>
+        <button id="clear-cart">Remove all</button>
+        <button id="checkout" >Checkout</button>
+    </div>
+    
+
+    <!-- check out-->
+    <div id="checkout-notification" class="notification">
+        <i class="fa-regular fa-circle-check fa-flip" style="color: green;font-size: 3rem;"></i>        
+        <h2 style="color: green; text-align: center;">Payment success!</h2>
+        <p>Proceeding to checkout with total: $<span id="checkout-total"></span></p>
+        <button id="close-notification">Close</button>
+    </div>
+      <!--body-->
+    <section class="moutain" id="moutain">
+    <section class="shop" id="shop" style="margin-top:100px;">
+        <h2 class="heading" style="margin-bottom: 50px;">Moutain Hiking</h2>
+        <div class="swiper product-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQ33polAhQr-fkb4zhIOxpsTlAab49nhMKj_1zSZsL1nWzXjWlPERQ7PHHbS7pfwn2R" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-eye" ></a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Compass</h3>
+                        <div class="price">
+                            <span class="new-price">$15.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="https://seatosummit.com/cdn/shop/files/AscentDownSleepingBag-1C-30FRegular_ASL041101-052001_USP_7_WBG.jpg?v=1706298287&width=1500" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Sleeping Bag</h3>
+                        <div class="price">
+                            <span class="new-price">$15.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="https://www.harborfreight.com/media/catalog/product/cache/9fc4a8332f9638515cd199dd0f9238da/5/9/59362_W3_1.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Flashlight</h3>
+                        <div class="price">
+                            <span class="new-price">$15.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="https://down-vn.img.susercontent.com/file/0aa1a022c78e3f1e3ac20a00e3ca3ce9" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Tent</h3>
+                        <div class="price">
+                            <span class="new-price">$15.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT4LJgX0YP-QRpZyr3bAyjs0vb--qGz64G-hOC1OGKgk88L2TjMKMVlkDdDi-imXcjKKUdH51Tsb9uJlqKgdy0gJwUebVTUhaZ4IOMjmEO-HrXAN-4ZkOXh&usqp=CAE" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Ignition Tools</h3>
+                        <div class="price">
+                            <span class="new-price">$15.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="https://dioutdoor.vn/media/2021/04/Moc-khoa-mac-vong-leo-nui-25kn-7.jpg.webp" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Keychain</h3>
+                        <div class="price">
+                            <span class="new-price">$15.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next" style="color: black;"></div>
+            <div class="swiper-button-prev" style="color: black;"></div>
+        </div>
+    </section>
+    </section>
+   
+    <section class="leak" id="leak">
+        <section class="shop" id="shop" style="margin-top:100px;">
+            <h2 class="heading" style="margin-bottom: 50px;">Leakside Camping</h2>
+            <div class="swiper product-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide">
+                        <div class="image">
+                            <img src="https://dioutdoor.vn/media/2023/12/Bo-Noi-Thep-Khong-Gi-Da-Ngoai-5-Mon-3-4-Nguoi-9-768x768.jpg.webp" alt="">
+                            <div class="icons">
+                                <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                <a href="#" class="fas fa-eye"></a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>5-piece pot set</h3>
+                            <div class="price">
+                                <span class="new-price">$20.00</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide slide">
+                        <div class="image">
+                            <img src="https://dioutdoor.vn/media/2020/05/Bep-nuong-Campingmoon-MT-3-6-768x768.jpg.webp" alt="">
+                            <div class="icons">
+                                <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                <a href="#" class="fas fa-eye"></a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Picnic Stove</h3>
+                            <div class="price" style="margin-top: 47px;">
+                                <span class="new-price" >$42.00</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide slide">
+                        <div class="image">
+                            <img src="https://dioutdoor.vn/media/2023/04/Den-Da-Ngoai-Sunset-Glamping-Naturehie-CNH22DQ009-17-768x768.jpg.webp" alt="">
+                            <div class="icons">
+                                <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                <a href="#" class="fas fa-eye"></a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Camping Light</h3>
+                            <div class="price" style="margin-top: 47px;">
+                                <span class="new-price">$35.00</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide slide">
+                        <div class="image">
+                            <img src="https://dioutdoor.vn/media/2023/08/Tram-sac-di-dong-9000mAh-Naturehike-NH20ZM011-15-768x768.jpg.webp" alt="">
+                            <div class="icons">
+                                <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                <a href="#" class="fas fa-eye"></a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Backup Changer</h3>
+                            <div class="price">
+                                <span class="new-price">$62.00</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide slide">
+                        <div class="image">
+                            <img src="https://dioutdoor.vn/media/2023/11/Tui-Dung-Gia-Vi-Da-Ngoai-21-768x768.jpg.webp" alt="">
+                            <div class="icons">
+                                <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                <a href="#" class="fas fa-eye"></a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Spice Bag</h3>
+                            <div class="price" style="margin-top: 47px;">
+                                <span class="new-price">$10.00</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide slide">
+                        <div class="image">
+                            <img src="https://dioutdoor.vn/media/2024/05/Thung-Da-Giu-Nhiet-36H-Naturehike-CNK2300BS012-23-768x768.jpg.webp" alt="">
+                            <div class="icons">
+                                <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                <a href="#" class="fas fa-eye"></a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Ice box</h3>
+                            <div class="price" style="margin-top: 47px;">
+                                <span class="new-price">$32.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next" style="color: black;"></div>
+                <div class="swiper-button-prev" style="color: black;"></div>
+            </div>
+        </section>
+        </section>
+
+    <section class="beach" id="beach">
+            <section class="shop" id="shop" style="margin-top:100px;">
+                <h2 class="heading" style="margin-bottom: 50px;">Beach Camping</h2>
+                <div class="swiper product-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide">
+                            <div class="image">
+                                <img src="https://shopuytin.vn/pictures/editor/images/3(264).jpg" alt="">
+                                <div class="icons">
+                                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                    <a href="#" class="fas fa-share"></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3>Mini Gas Stove</h3>
+                                <div class="price" style="margin-top: 47px;">
+                                    <span class="new-price">$15.00</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-slide slide">
+                            <div class="image">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/479/165/products/leu-10-nguoi-glamping-naturehike-brighten-image-1-1679190366567.jpg?v=1679190372350" alt="">
+                                <div class="icons">
+                                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                    <a href="#" class="fas fa-share"></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3>Mongolia Camping Tent</h3>
+                                <div class="price">
+                                    <span class="new-price">$70.00</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-slide slide">
+                            <div class="image">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/479/165/products/ban-nhom-cam-trai-cuon-trung-loai-co-gia-treo-naturehike-cnk2300jj019-mau-go-oc-cho-den-1715745902418.jpg?v=1715745907360" alt="">
+                                <div class="icons">
+                                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                    <a href="#" class="fas fa-share"></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3>Camping table</h3>
+                                <div class="price">
+                                    <span class="new-price">$30.00</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-slide slide">
+                            <div class="image">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/479/165/products/ghe-xep-hinh-chu-v-cam-trai-naturehike-cnh22ju060-3-1715850433759.jpg?v=1715850453920" alt="">
+                                <div class="icons">
+                                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                    <a href="#" class="fas fa-share"></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3>Camping chair</h3>
+                                <div class="price">
+                                    <span class="new-price">$30.00</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-slide slide">
+                            <div class="image">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/479/165/products/tui-y-te-first-aid-kit-mini-1679394845168.jpg?v=1679394850427" alt="">
+                                <div class="icons">
+                                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                    <a href="#" class="fas fa-share"></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3>Medical Bag</h3>
+                                <div class="price" style="margin-top: 47px;">
+                                    <span class="new-price">$3.00</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-slide slide">
+                            <div class="image">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/479/165/products/coc-titanium-2-lop-naturehike-nh20cj019-chong-nong-anh-dai-dien-1704685747248.jpg?v=1704685752297" alt="">
+                                <div class="icons">
+                                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                    <a href="#" class="fas fa-share"></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3>Galss of water</h3>
+                                <div class="price">
+                                    <span class="new-price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next" style="color: black;"></div>
+                    <div class="swiper-button-prev" style="color: black;"></div>
+                </div>
+            </section>
+        </section>
+
+    <section class="forest" id="forest">
+                <section class="shop" id="shop" style="margin-top:100px;">
+                    <h2 class="heading" style="margin-bottom: 50px;">Forest Exploration</h2>
+                    <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide">
+                                <div class="image">
+                                    <img src="https://honeybros.com/wp-content/uploads/2019/11/HB_helmetcombo-252-scaled.jpg" alt="">
+                                    <div class="icons">
+                                        <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                        <a href="#" class="fas fa-share"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3>Forest Helmet</h3>
+                                    <div class="price" style="margin-top: 47px;">
+                                        <span class="new-price">$50.00</span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="swiper-slide slide">
+                                <div class="image">
+                                    <img src="https://file.hstatic.net/200000033050/file/day-an-toan-ban-than-cov-2-moc_dbd4a3cfbdc34c48a88c8f9ffa21f806_grande.jpg" alt="">
+                                    <div class="icons">
+                                        <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                        <a href="#" class="fas fa-share"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3>Sealbelt</h3>
+                                    <div class="price" style="margin-top: 47px;">
+                                        <span class="new-price">$20.00</span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="swiper-slide slide">
+                                <div class="image">
+                                    <img src="https://product.hstatic.net/200000467803/product/fanfan-gang-tay-trekking-det-kim-polyamide-10_0064515_835b1073973c4ef59691996a204be103_1024x1024.png" alt="">
+                                    <div class="icons">
+                                        <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                        <a href="#" class="fas fa-share"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3>Glove</h3>
+                                    <div class="price" style="margin-top: 47px;">
+                                        <span class="new-price">$15.00</span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="swiper-slide slide">
+                                <div class="image">
+                                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRtLu2AjYL-_05GUlCdazeKfPvyZiBEXZYDethLhzPr8BrfwoVAba7R7xs26ofAdjPTTt6K8m9Ta4pObr5ZdTIVxLvyJTN1fFfkCyi1L9q8sWa2-cGO37TY8g&usqp=CAE" alt="">
+                                    <div class="icons">
+                                        <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                        <a href="#" class="fas fa-share"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3>Expedition Backpack</h3>
+                                    <div class="price">
+                                        <span class="new-price">$100.00</span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="swiper-slide slide">
+                                <div class="image">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV9CorRwPIpcRRY9sOJjlcXeflys2bPernJg&s" alt="">
+                                    <div class="icons">
+                                        <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                        <a href="#" class="fas fa-share"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3>Flares</h3>
+                                    <div class="price" style="margin-top: 47px;">
+                                        <span class="new-price">$5.00</span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="swiper-slide slide">
+                                <div class="image">
+                                    <img src="https://product.hstatic.net/200000467803/product/n-loc-nuoc-sawyer-mini-water-filter-sp101-green-zirfukxa20es89i1rdo0aw_26a2758502e24557808d874b4c973cd0_1024x1024.jpg" alt="">
+                                    <div class="icons">
+                                        <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                        <a href="#" class="fas fa-share"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3>Water Purifier</h3>
+                                    <div class="price" style="margin-top: 47px;">
+                                        <span class="new-price">$60.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next" style="color: black;"></div>
+                        <div class="swiper-button-prev" style="color: black;"></div>
+                    </div>
+                </section>
+        </section>
+
+
+    <section class="desert" id="desert">
+            <section class="shop" id="shop" style="margin-top:100px;">
+                <h2 class="heading" style="margin-bottom: 50px;">Desert Camping</h2>
+                <div class="swiper product-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide">
+                            <div class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIl9Wvs9TXWFTKmJOpYljpETue9a0IFcr1aw&s" alt="">
+                                <div class="icons">
+                                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                    <a href="#" class="fas fa-share"></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3>Anti-dust Tent</h3>
+                                <div class="price" style="margin-top: 47px;">
+                                    <span class="new-price">$60.00</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-slide slide">
+                            <div class="image">
+                                <img src="https://naturehike.com.vn/wp-content/uploads/2019/11/tham-du-lich-da-nang-chong-nuoc-naturehike-nh19c024-z-1.1-1-300x300.jpg" alt="">
+                                <div class="icons">
+                                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                    <a href="#" class="fas fa-share"></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3>Tent Mats</h3>
+                                <div class="price" style="margin-top: 47px;">
+                                    <span class="new-price">$30.00</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-slide slide">
+                            <div class="image">
+                                <img src="https://salt.tikicdn.com/cache/w300/ts/product/cc/d6/2f/5161a1e1c7e29597db685102a23718a4.jpg" alt="">
+                                <div class="icons">
+                                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                    <a href="#" class="fas fa-share"></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3>Slepping Bag</h3>
+                                <div class="price" style="margin-top: 47px;">
+                                    <span class="new-price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-slide slide">
+                            <div class="image">
+                                <img src="https://www.naturehike.vn/wp-content/uploads/2018/06/Den-leu-NatureHike.jpg" alt="">
+                                <div class="icons">
+                                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                    <a href="#" class="fas fa-share"></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3>Tent Hanging Lights</h3>
+                                <div class="price">
+                                    <span class="new-price">$15.00</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-slide slide">
+                            <div class="image">
+                                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSCYw7f5KDSw72EZ7xIgF1dXt4U05wtnsUEGt6gKubmROULHb1v8fLt7fcFSfd4L1yvmCa1xpBCKoqt2Go1S2lIU9QTrHlMqlnR6kcNGPe5gfXAj_yojBUlug&usqp=CAE" alt="">
+                                <div class="icons">
+                                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                    <a href="#" class="fas fa-share"></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3>Cooking Utensils</h3>
+                                <div class="price">
+                                    <span class="new-price">$75.00</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-slide slide">
+                            <div class="image">
+                                <img src="https://bizweb.dktcdn.net/100/479/165/products/dem-doi-tu-bom-hoi-naturehike-double-pillow-automatic-inflatable-mat-xanh-ngoc-1678758234032.jpg?v=1684552147903" alt="">
+                                <div class="icons">
+                                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                    <a href="#" class="fas fa-share"></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3>Camping Air Mattress
+                                </h3>
+                                <div class="price">
+                                    <span class="new-price">$67.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next" style="color: black;"></div>
+                    <div class="swiper-button-prev" style="color: black;"></div>
+                </div>
+            </section>
+        </section>
+
+        <footer style="margin-top: 50px;">
+            <div>
+              <span>Copyright © 2023 All Rights Reserved</span>
+              </span>
+            </div>
+          </footer>
+    <script src="shop.js"></script>
+    <script>
+       var swiper = new Swiper(".product-slider", {
+        loop: true,
+        grabCursor: true,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            568: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,},
+        },
+       });
+    </script>
+</body>
+</html>

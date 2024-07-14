@@ -1,0 +1,95 @@
+.cart {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 300px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 10;
+    display: none;
+    border-radius: 5px;
+}
+.cart.show{
+    display: block;
+}
+
+.cart h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart button {
+    background: rgb(255, 35, 35);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.cart button:hover {
+    background: rgb(210, 3, 3);
+    color: rgb(255, 255, 255);
+}
+#total-amount {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#checkout {
+    background: rgb(34, 139, 34);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#checkout:hover {
+    background: rgb(0, 100, 0);
+}
+
+/*check out*/
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 20;
+    display: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.notification.show {
+    display: block;
+}
+.notification button {
+    background: rgb(255, 35, 35);
+    color: white;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.notification button:hover {
+    background: rgb(210, 3, 3);
+}
+
